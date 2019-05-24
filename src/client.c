@@ -107,6 +107,7 @@ int main(int argc, char *argv[]) {
 
   numbytes = recv(sockfd, buf, BUFSIZE - 1, 0);
   printf("%s", buf);
+  close(sockfd);
   free(url);
   /*
     1. Parse the input URL
